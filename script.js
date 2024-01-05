@@ -56,13 +56,13 @@ const locations = [
         "button functions": [attack, dodge, goTown],
         text: "You are fighting a monster."
     
-      }
+    }
 
 ];
 // intialize buttons
 button1.onclick = goStore;
 button2.onclick = goCave;
-button3.onclick =fightDragon;
+button3.onclick = fightDragon;
 
 function update(location) {
     button1.innerText = location["button text"][0];
@@ -150,6 +150,7 @@ function fightDragon() {
 function goFight() {
     update(locations[3]);
     monsterHealth = monsters[fighting].health;
+    monsterStats.style.display = "block";
 }
 
 function attack() {
